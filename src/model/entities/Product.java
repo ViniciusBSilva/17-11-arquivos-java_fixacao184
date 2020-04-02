@@ -1,5 +1,7 @@
 package model.entities;
 
+import model.exceptions.DomainException;
+
 public class Product {
 
 	private String name;
@@ -22,7 +24,10 @@ public class Product {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(Double price) throws DomainException {
+		if (price <= 0 ) {
+			throw new DomainException("Price must be greater than zero");
+		}
 		this.price = price;
 	}	
 
