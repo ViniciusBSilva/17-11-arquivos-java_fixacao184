@@ -49,7 +49,7 @@ public class Order {
 					item.calculateItemTotal());
 		}
 		
-		formatter.format("%n");
+		formatter.format("| ---------------------------------------------------------------------------------------------- |%n");
 		formatter.format("%n");
 		
 		formatter.format("Total: %.2f", calculateTotal());
