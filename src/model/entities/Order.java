@@ -36,8 +36,12 @@ public class Order {
 	
 	public String toString () {
 		Formatter formatter = new Formatter();
-			
-		formatter.format("| Item | Product%-33s | Price%-10.2f | Quantity | Item Total%-5.2f | %n", "", "", "", "");
+		
+		formatter.format("%n");
+		formatter.format("| ---------------------------------------------------------------------------------------------- |%n");
+		formatter.format("| Item | Product%-33s | Price%-10s | Quantity | Item Total%-5s | %n", "", "", "", "");
+		formatter.format("| ---------------------------------------------------------------------------------------------- |%n");
+		
 		int i = 0;
 		for (OrderItem item : orderItems) {
 			i++;
